@@ -6,7 +6,7 @@
     },
     "main": "dist/src/functions/*.js",
     "scripts": {
-        "dev:teamsfx": "env-cmd --silent -f .localConfigs npm run dev",
+        "dev:teamsfx": "echo Node path: $(which node) && node -v && env-cmd --silent -f .localConfigs npm run dev",
         "dev": "func start --typescript --language-worker=\"--inspect=9229\" --port \"7071\" --cors \"*\"",
         "build": "tsc",
         "watch:teamsfx": "tsc -w",
